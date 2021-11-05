@@ -1,7 +1,7 @@
 <template>
 <div @click="collapseMenu()">
   <div class="hero">
-    <img alt="Vue logo" src="../assets/img/spielecke_regal.jpg">
+    <img alt="Vue logo" src="../assets/img/spielecke_regal_c.webp">
     <h2 class="hero-title">Kindertagespflege für Ratzeburg und Umland</h2>
     <h2 class="hero-action">Es sind noch Plätze frei!</h2>
   </div>
