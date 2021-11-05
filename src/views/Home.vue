@@ -6,7 +6,7 @@
   </div>
   <section class="call-to-action">
     <h2>Sichern Sie sich einen Platz</h2>
-    <p>Kontaktieren Sie mich am Besten noch heute! Ich entlaste Sie gerne und übernehme die Tagespflege Ihres Kindes oder Ihrer Kinder.</p>
+    <p>Kontaktieren Sie mich am Besten noch heute! Ich entlaste Sie gerne und übernehme mit Herz und Leidenschaft die Tagespflege Ihres Kindes oder Ihrer Kinder.</p>
     <router-link to="/kontakt" class="contact-button">Kontakt</router-link>
   </section>
 </template>
