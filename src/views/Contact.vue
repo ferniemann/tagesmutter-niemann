@@ -7,7 +7,7 @@
     <h2>Kontaktinformationen</h2>
     <div class="info">
       <h3>E-Mail</h3>
-      <a href="mailto:hartmut.niemann@freenet.de">hartmut.niemann@freenet.de</a>
+      <a href="mailto:reg.niemann«gmail.com">reg.niemann@gmail.com</a>
       <h3>Telefon</h3>
       <p>04541 / 4594</p>
     </div>
