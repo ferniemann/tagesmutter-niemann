@@ -1,4 +1,5 @@
 <template>
+<div @click="collapseMenu()">
   <div class="hero">
     <img alt="Vue logo" src="../assets/img/spielecke_regal.jpg">
     <h2 class="hero-title">Kindertagespflege für Ratzeburg und Umland</h2>
@@ -9,12 +10,22 @@
     <p>Kontaktieren Sie mich am Besten noch heute! Ich entlaste Sie gerne und übernehme mit Herz und Leidenschaft die Tagespflege Ihres Kindes oder Ihrer Kinder.</p>
     <router-link to="/kontakt" class="contact-button">Kontakt</router-link>
   </section>
+</div>
 </template>
 
 <script>
 
 export default {
-  name: 'Home'
+  name: 'Home',
+  methods: {
+        collapseMenu() {
+        const toggle = document.getElementById("toggle-nav")
+
+        if (toggle.checked) {
+            toggle.checked = false
+        }
+    }
+  }
 }
 </script>
 
@@ -97,11 +108,13 @@ img {
 
   .call-to-action p {
     font-size: 1.75rem;
-    margin: 2rem 0;
+    margin: 3rem 0;
   }
 
   .contact-button {
+    display: inline-block;
     font-size: 1.75rem;
+    margin-top: 3rem;
   }
 }
 </style>

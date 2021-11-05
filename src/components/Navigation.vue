@@ -1,10 +1,14 @@
 <template>
 <div class="navigation">
-  <label for="toggle-nav" class="toggle-label">Menu</label>
   <input type="checkbox" name="" id="toggle-nav" class="toggle-nav">
+  <label for="toggle-nav" class="toggle-label">
+      <div class="hamburger hamburger-upper"></div>
+      <div class="hamburger hamburger-middle"></div>
+      <div class="hamburger hamburger-lower"></div>
+  </label>
   <nav>
-      <router-link to="/">Startseite</router-link>
-      <router-link to="/kontakt">Kontakt</router-link>
+      <router-link to="/" class="menu-link" @click="collapseMenu()">Startseite</router-link>
+      <router-link to="/kontakt" class="menu-link" @click="collapseMenu()">Kontakt</router-link>
   </nav>
 </div>
 </template>
@@ -16,6 +20,16 @@ export default {
         return {
             test: "Test"
         }
+    },
+
+    methods: {
+        collapseMenu() {
+            const toggle = document.getElementById("toggle-nav")
+
+            if (toggle.checked) {
+                toggle.checked = false
+            }
+        }
     }
 }
 </script>
@@ -23,8 +37,6 @@ export default {
 <style>
 .navigation {
     text-align: center;
-    position: absolute;
-    background-color: var(--color-bg);
     left: 0;
     right: 0;
     justify-content: center;
@@ -33,8 +45,24 @@ export default {
     z-index: 10;
 }
 
+.toggle-label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    transition: .2s;
+}
+
+.hamburger {
+    width: 2rem;
+    height: 2px;
+    background-color: var(--color-light);
+    margin: 0 auto;
+    margin-bottom: .5rem;
+}
+
 .toggle-nav {
     all: unset;
+    displaY: none;
 }
 
 .toggle-label {
@@ -42,24 +70,6 @@ export default {
     font-size: 1rem;
     margin-right: .5rem;
     cursor: pointer;
-}
-
-.toggle-nav::before {
-    content: "";
-    display: inline-block;
-    cursor: pointer;
-    width: 1rem;
-    height: 2px;
-    padding: 2px;
-    border-bottom: 2px solid var(--color-light);
-    border-top: 2px solid var(--color-light);
-}
-
-.toggle-nav:checked::before {
-    content: "X";
-    border-color: transparent;
-    color: var(--color-light);
-    font-size: 1rem;
 }
 
 nav {
@@ -75,7 +85,7 @@ nav a {
     border-radius: .5rem;
 }
 
-.toggle-nav:checked + nav {
+.toggle-nav:checked ~ nav {
     display: flex;
     flex-direction: column;
 }

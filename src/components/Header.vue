@@ -22,7 +22,6 @@ export default {
     header {
         padding: 1rem 0;
         background-color: var(--color-bg);
-        margin-bottom: 1rem;
     }
 
     .logo {

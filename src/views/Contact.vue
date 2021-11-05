@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="contact" @click="collapseMenu()">
     <h1>Kontakt</h1>
     <p>
       Kontaktieren Sie mich am Besten noch heute! Gemeinsam finden wir heraus, wie ich Sie am Besten entlasten und die Tagespflege Ihres Kindes oder Ihrer Kinder übernehmen kann. Ich freue mich!
@@ -16,6 +16,20 @@
     <p>Ferdinand Niemann<br>Mühlenweg 48<br>23909 Ratzeburg<br>0176 / 657 335 61<br>E-Mail: legal@ferdinand-niemann.eu</p>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    collapseMenu() {
+      const toggle = document.getElementById("toggle-nav")
+
+      if (toggle.checked) {
+        toggle.checked = false
+      }
+    }
+  }
+}
+</script>
 
 <style>
 .contact {
